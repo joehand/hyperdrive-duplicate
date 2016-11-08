@@ -1,0 +1,22 @@
+{
+  "name": "hyperdrive-duplicate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joehand/hyperdrive-duplicate.git"
+  },
+  "author": "Joe Hand <joe@hand.email> (https://joeahand.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joehand/hyperdrive-duplicate/issues"
+  },
+  "homepage": "https://github.com/joehand/hyperdrive-duplicate#readme",
+  "dependencies": {
+    "stream-equal": "^0.1.9"
+  }
+}
