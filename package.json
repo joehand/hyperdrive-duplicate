@@ -1,7 +1,7 @@
 {
   "name": "hyperdrive-duplicate",
   "version": "1.0.0",
-  "description": "",
+  "description": "Compare file contents for a file in hyperdrive and on the filesystem.",
   "main": "index.js",
   "scripts": {
     "test": "standard"
