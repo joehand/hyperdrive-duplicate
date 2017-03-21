@@ -6,10 +6,11 @@ module.exports = function (archive, file, entry, cb) {
     cb = entry
     entry = file
   }
-  archive.get(entry, function (err, st) {
-    if (err && !st) return cb(null, false)
+  archive.stat(entry, function (err, stat) {
+    if (err || !stat) return cb(null, false)
+    // TODO: compare fs.stat
     var fileStream = fs.createReadStream(file)
-    var entryStream = archive.createFileReadStream(st)
+    var entryStream = archive.createReadStream(entry)
     streamEqual(fileStream, entryStream, cb)
   })
 }
