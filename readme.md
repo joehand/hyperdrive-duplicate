@@ -11,7 +11,7 @@ var isDuplicate = require('hyperdrive-duplicate')
 var drive = hyperdrive(memdb())
 var archive = drive.createArchive({file: function (name) { return raf(name) }})
 
-archive.append('example.js', function (err) {
+archive.writeFile('example.js', fs.readFileSync('example.js'), function (err) {
   if (err) throw err
   // example.js is now in the archive
   // we can see if the fs file is duplicate
