@@ -13,9 +13,11 @@ var archive = drive.createArchive({file: function (name) { return raf(name) }})
 
 archive.append('example.js', function (err) {
   if (err) throw err
+  // example.js is now in the archive
+  // we can see if the fs file is duplicate
   isDuplicate(archive, 'example.js', function (err, duplicate) {
     if (err) throw err
-    if (duplicate) console.log(`${duplicate}: example.js is duplicate`)
+    if (duplicate) console.log('example.js is duplicate!')
   })
 })
 ```

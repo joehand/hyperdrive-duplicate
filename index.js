@@ -1,5 +1,5 @@
-var streamEqual = require('stream-equal')
 var fs = require('fs')
+var streamEqual = require('stream-equal')
 
 module.exports = function (archive, file, entry, cb) {
   if (typeof entry === 'function') {
