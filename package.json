@@ -4,7 +4,7 @@
   "description": "Compare file contents for a file in hyperdrive and on the filesystem.",
   "main": "index.js",
   "scripts": {
-    "test": "standard"
+    "test": "standard && tape test.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,11 @@
   },
   "peerDependencies": {
     "hyperdrive": "^8.0.0"
+  },
+  "devDependencies": {
+    "hyperdrive": "^8.0.0",
+    "random-access-memory": "^2.3.0",
+    "standard": "^9.0.2",
+    "tape": "^4.6.3"
   }
 }
