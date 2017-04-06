@@ -1,13 +1,12 @@
+var fs = require('fs')
 var hyperdrive = require('hyperdrive')
-var memdb = require('memdb')
-var raf = require('random-access-file')
+var ram = require('random-access-memory')
 
 var isDuplicate = require('.')
 
-var drive = hyperdrive(memdb())
-var archive = drive.createArchive({file: function (name) { return raf(name) }})
+var archive = hyperdrive(ram)
 
-archive.append('example.js', function (err) {
+archive.writeFile('example.js', fs.readFileSync('example.js'), function (err) {
   if (err) throw err
   isDuplicate(archive, 'example.js', function (err, duplicate) {
     if (err) throw err
