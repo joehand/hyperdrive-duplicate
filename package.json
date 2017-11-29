@@ -20,10 +20,10 @@
     "stream-equal": "^0.1.9"
   },
   "peerDependencies": {
-    "hyperdrive": "^8.0.0"
+    "hyperdrive": "^9.0.0"
   },
   "devDependencies": {
-    "hyperdrive": "^8.0.0",
+    "hyperdrive": "^9.0.0",
     "random-access-memory": "^2.3.0",
     "standard": "^9.0.2",
     "tape": "^4.6.3"
